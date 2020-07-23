@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root 'inscricao#new'
+  resources :inscricaos
+  root 'inscricaos#new'
 end
