@@ -3,3 +3,4 @@ class InscricaoController < ApplicationController
   end
 end
 
+
