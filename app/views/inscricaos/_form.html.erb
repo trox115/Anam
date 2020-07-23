@@ -1,0 +1,77 @@
+<%= form_with(model: inscricao, local: true) do |form| %>
+  <% if inscricao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(inscricao.errors.count, "error") %> prohibited this inscricao from being saved:</h2>
+
+      <ul>
+        <% inscricao.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-row ">
+  <div class="name">Nome</div>
+  <div class="value">
+                                        <div class="input-group">
+    <%= form.text_field :nome, class:'input--style-5'%>
+    </div>
+    </div>
+  </div>
+
+  <div class="form-row ">
+  <div class="name">Telemóvel</div>
+  <div class="value">
+                                        <div class="input-group">
+    <%= form.text_field :telefone,class:'input--style-5'   %>
+    </div>
+    </div>
+  </div>
+
+  <div class="form-row ">
+  <div class="name">Email</div>
+  <div class="value">
+                                        <div class="input-group">
+    <%= form.text_field :email,class:'input--style-5' %>
+  </div>
+  </div>
+  </div>
+
+  <div class="form-row ">
+  <div class="name">Tipo</div>
+  <div class="value">
+                                        <div class="input-group">
+  <div class="field">
+  <%= form.select :tipo, ['PAM', 'Substituto'] %>
+  </div>
+</div>
+  </div>
+  
+
+  <div class="form-row ">
+  <div class="name">Categoria</div>
+  <div class="value">
+                                        <div class="input-group">
+                                        <%= form.select :categoria, ['Delegado', 'Observador'] %>
+
+
+  </div>
+</div>
+</div>
+</div>
+  <div class="form-row ">
+  <div class="name">Município</div>
+  <div class="value">
+                                        <div class="input-group">
+    <%= form.text_field :municipio ,class:'input--style-5' %>
+  </div>
+</div>
+  </div>
+  </div>
+<br>
+  <div class="actions">
+    <%= form.submit "Submeter inscrição" , :class => 'btn btn-primary' %>
+  </div>
+
+<% end %>
