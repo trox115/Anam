@@ -28,6 +28,7 @@ class InscricaosController < ApplicationController
 
     respond_to do |format|
       if @inscricao.save
+        InscricaoMailer.confirmacao_inscricao(@inscricao).deliver
         format.html { redirect_to @inscricao, notice: 'A sua inscrição foi submetida com sucesso irá receber um link para pagamento em menos de 24 horas' }
         format.json { render :show, status: :created, location: @inscricao }
       else

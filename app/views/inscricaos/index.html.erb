@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Inscricaos</h1>
+<h1>Inscrições</h1>
 
 <table>
   <thead>
@@ -24,9 +24,9 @@
         <td><%= inscricao.tipo %></td>
         <td><%= inscricao.categoria %></td>
         <td><%= inscricao.municipio %></td>
-        <td><%= link_to 'Show', inscricao %></td>
-        <td><%= link_to 'Edit', edit_inscricao_path(inscricao) %></td>
-        <td><%= link_to 'Destroy', inscricao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', inscricao %></td>
+        <td><%= link_to 'Editar', edit_inscricao_path(inscricao) %></td>
+        <td><%= link_to 'Eliminar', inscricao, method: :delete, data: { confirm: 'Tem a certe?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Inscricao', new_inscricao_path %>
+<%= link_to 'Nova Inscricao', new_inscricao_path %>
