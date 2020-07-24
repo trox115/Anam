@@ -839,6 +839,11 @@ input {
 	background-repeat: no-repeat;
 }
 
+.imagem2 img {
+	width: 400px;
+	height: auto;
+}
+
 .card-5 .card-body {
 	padding: 52px 85px;
 	padding-bottom: 73px;

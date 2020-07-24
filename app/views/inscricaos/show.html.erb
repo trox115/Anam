@@ -32,7 +32,14 @@
 <div class="container">
 <div class="row">
 <div class="col-md-12">
+<% if @inscricao.image.attached? %>
+<div class="imagem2">
+<%= image_tag(@inscricao.image) %>
+</div>
+<%else%>
 <div class="imagem"></div>
+
+<%end%>
 </div>
 </div>
 </div>
