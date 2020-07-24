@@ -1,0 +1,9 @@
+Olá <%= @inscricao.nome %>,<br>
+
+A sua inscrição encontra-se pendente. Deverá efetuar o pagamento para o seguinte IBAN:
+<strong> IBAN: PT50 02690 30200 2005543743 2. </strong><br><br>
+
+Após efetuar pagamento, por favor submeta o recibo clicando aqui.
+<%='http://localhost:3000/inscricaos/'+@inscricao.id.to_s+'/edit' %>
+
+Obrigado pela sua inscrição

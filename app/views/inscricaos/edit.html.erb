@@ -1,0 +1,30 @@
+<div class="wrapper wrapper--w790">
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">Submeter comprovativo</h2>
+                </div>
+                <div class="card-body">
+<%= form_with(model: @inscricao, local: true) do |form| %>
+  
+  <div class="form-row ">
+  <div class="name">Comprovativo <br>de pagamento</div>
+  <div class="value">
+                                        <div class="input-group">
+    <%= form.file_field :image ,class:'input--style-5' %>
+  </div>
+</div>
+  </div>
+
+<br>
+
+
+    <div class="actions">
+      <%= form.submit "Submeter comprovativo" , :class => 'btn btn-primary' %>
+    </div>
+  
+  <% end %>
+  
+  </div>
+  </div>
+  </div>
+<%= link_to 'Ver', @inscricao %> |

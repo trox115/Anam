@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Inscrições</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Telefone</th>
+      <th>Email</th>
+      <th>Tipo</th>
+      <th>Categoria</th>
+      <th>Municipio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @inscricaos.each do |inscricao| %>
+      <tr>
+        <td><%= inscricao.nome %></td>
+        <td><%= inscricao.telefone %></td>
+        <td><%= inscricao.email %></td>
+        <td><%= inscricao.tipo %></td>
+        <td><%= inscricao.categoria %></td>
+        <td><%= inscricao.municipio %></td>
+        <td><%= link_to 'Mostrar', inscricao %></td>
+        <td><%= link_to 'Editar', edit_inscricao_path(inscricao) %></td>
+        <td><%= link_to 'Eliminar', inscricao, method: :delete, data: { confirm: 'Tem a certe?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nova Inscricao', new_inscricao_path %>
