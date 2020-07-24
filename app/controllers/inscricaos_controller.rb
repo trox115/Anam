@@ -25,7 +25,7 @@ class InscricaosController < ApplicationController
   # POST /inscricaos.json
   def create
     @inscricao = Inscricao.new(inscricao_params)
-
+    
     respond_to do |format|
       if @inscricao.save
         InscricaoMailer.confirmacao_inscricao(@inscricao).deliver
@@ -70,6 +70,6 @@ class InscricaosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def inscricao_params
-      params.require(:inscricao).permit(:nome, :telefone, :email, :tipo, :categoria, :municipio)
+      params.require(:inscricao).permit(:nome, :telefone, :email, :tipo, :categoria, :municipio, :image)
     end
 end
