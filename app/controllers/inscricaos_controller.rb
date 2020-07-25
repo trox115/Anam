@@ -43,7 +43,7 @@ class InscricaosController < ApplicationController
   def update
     respond_to do |format|
       if @inscricao.update(inscricao_params)
-        format.html { redirect_to @inscricao, notice: 'Inscricao was successfully updated.' }
+        format.html { redirect_to @inscricao, notice: 'Inscrição Validada.' }
         format.json { render :show, status: :ok, location: @inscricao }
       else
         format.html { render :edit }
