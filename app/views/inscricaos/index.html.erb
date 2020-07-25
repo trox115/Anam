@@ -1,16 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Inscrições</h1>
-
-<table>
+<div class="table-responsive">
+<table class="table table-striped w-auto">
   <thead>
     <tr>
-      <th>Nome</th>
-      <th>Telefone</th>
-      <th>Email</th>
-      <th>Tipo</th>
-      <th>Categoria</th>
-      <th>Municipio</th>
+    <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Telefone</th>
+      <th scope="col">Email</th>
+      <th scope="col">Tipo</th>
+      <th scope="col">Categoria</th>
+      <th scope="col">Municipio</th>
+      <th scope="col">Opções</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +20,7 @@
   <tbody>
     <% @inscricaos.each do |inscricao| %>
       <tr>
+      <th scope="row"><%= inscricao.id %></th>
         <td><%= inscricao.nome %></td>
         <td><%= inscricao.telefone %></td>
         <td><%= inscricao.email %></td>
@@ -31,7 +34,7 @@
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
 
 <%= link_to 'Nova Inscricao', new_inscricao_path %>
