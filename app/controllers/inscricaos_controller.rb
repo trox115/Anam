@@ -4,7 +4,7 @@ class InscricaosController < ApplicationController
   # GET /inscricaos
   # GET /inscricaos.json
   def index
-    @inscricaos = Inscricao.all
+    @inscricaos = Inscricao.order(:id)
   end
 
   # GET /inscricaos/1
