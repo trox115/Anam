@@ -7,6 +7,10 @@ class InscricaosController < ApplicationController
     @inscricaos = Inscricao.order(:id)
   end
 
+  def email
+    @inscricaos = Inscricao.order(:id)
+  end
+
   # GET /inscricaos/1
   # GET /inscricaos/1.json
   def show
