@@ -11,6 +11,9 @@ class InscricaosController < ApplicationController
     @inscricaos = Inscricao.order(:id)
   end
 
+  def telemoveis
+    @inscricaos = Inscricao.order(:id)
+  end
   # GET /inscricaos/1
   # GET /inscricaos/1.json
   def show
